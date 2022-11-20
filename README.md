@@ -15,6 +15,8 @@ docker run -d \
     colinchang/ubuntu-desktop
 ```
 
+![效果图](screen_shot.png)
+
 注意通过浏览器访问时协议类型务必确认是`https`,
 默认登录信息如下：
 * 用户名：kasm_user
