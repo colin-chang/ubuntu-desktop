@@ -4,7 +4,11 @@
 
 使用如下命令运行容器，即可得到一个纯净的Ubuntu 22.04桌面环境，通过任意浏览器访问 `https://your-host-ip` 即可。适合部署在Home Server或OpenWrt等软路由系统中，实现网络资源下载和私有网络服务访问。
 
-```sh
+```bash
+# build
+docker build -t colinchang/ubuntu-desktop .
+
+# run
 docker run -d \
     --name ubuntu \
     --shm-size=512m \
