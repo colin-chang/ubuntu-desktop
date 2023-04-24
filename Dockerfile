@@ -10,9 +10,8 @@ COPY $PWD/xunlei_1.0.0.1-myubuntu_amd64.deb /home/kasm-user
 RUN apt update && mkdir -p /home/kasm-user/Desktop \
 
 # Chrome
-&& apt install -y xdg-utils fonts-liberation \
+&& apt install -y xdg-utils fonts-liberation libu2f-udev \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-&& apt install -f -y \
 && dpkg -i google-chrome-stable_current_amd64.deb \
 && sed -i 's/Exec=\/usr\/bin\/google-chrome-stable/Exec=\/usr\/bin\/google-chrome-stable --no-sandbox/g' /usr/share/applications/google-chrome.desktop \
 && ln -s /usr/share/applications/google-chrome.desktop /home/kasm-user/Desktop/google-chrome.desktop \
@@ -36,7 +35,7 @@ RUN apt update && mkdir -p /home/kasm-user/Desktop \
 
 # Visual Studio Code
 && wget https://az764295.vo.msecnd.net/stable/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/code_1.77.3-1681292746_amd64.deb \
-&& dpkg -i code_1.77.3-1667967334_amd64.deb \
+&& dpkg -i code_1.77.3-1681292746_amd64.deb \
 && sed -i 's/Exec=\/usr\/share\/code\/code/Exec=\/usr\/share\/code\/code --no-sandbox/g' /usr/share/applications/code.desktop \
 && sed -i 's/Icon=com.visualstudio.code/Icon=\/usr\/share\/code\/resources\/app\/resources\/linux\/code.png/g' /usr/share/applications/code.desktop \
 && ln -s /usr/share/applications/code.desktop /home/kasm-user/Desktop/code.desktop \
