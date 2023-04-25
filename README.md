@@ -2,6 +2,9 @@
 
 基于[KasmWeb](https://www.kasmweb.com/)的 Ubuntu 22.04 桌面版（Web） Docker Image。镜像替换了阿里云Ubuntu Jammy镜像源，安装了Google Chrome浏览器和流行的文本编辑器VSCode。同时集成了qBittorren/迅雷/百度网盘国内流行的主流下载工具。
 
+[![利用闲置带宽,24小时下载资源](https://res.cloudinary.com/marcomontalbano/image/upload/v1682406905/video_to_markdown/images/youtube--5teutTC-yEk-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/5teutTC-yEk "利用闲置带宽,24小时下载资源")
+
+
 使用如下命令运行容器，即可得到一个纯净的Ubuntu 22.04桌面环境，通过任意浏览器访问 `https://your-host-ip` 即可。适合部署在Home Server或OpenWrt等软路由系统中，实现网络资源下载和私有网络服务访问。
 
 ```bash
