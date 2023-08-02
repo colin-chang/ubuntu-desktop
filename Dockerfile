@@ -1,4 +1,4 @@
-FROM kasmweb/core-ubuntu-jammy:develop
+FROM kasmweb/core-ubuntu-jammy:1.13.0
 
 LABEL version="1.0" maintainer="colinchang<zhangcheng5468@gmail.com>"
 
@@ -34,8 +34,8 @@ RUN apt update && mkdir -p /home/kasm-user/Desktop \
 && ln -s /usr/share/applications/org.qbittorrent.qBittorrent.desktop /home/kasm-user/Desktop/org.qbittorrent.qBittorrent.desktop \
 
 # Visual Studio Code
-&& wget https://az764295.vo.msecnd.net/stable/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/code_1.77.3-1681292746_amd64.deb \
-&& dpkg -i code_1.77.3-1681292746_amd64.deb \
+&& wget https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/code_1.80.2-1690491597_amd64.deb \
+&& dpkg -i code_1.80.2-1690491597_amd64.deb \
 && sed -i 's/Exec=\/usr\/share\/code\/code/Exec=\/usr\/share\/code\/code --no-sandbox/g' /usr/share/applications/code.desktop \
 && sed -i 's/Icon=com.visualstudio.code/Icon=\/usr\/share\/code\/resources\/app\/resources\/linux\/code.png/g' /usr/share/applications/code.desktop \
 && ln -s /usr/share/applications/code.desktop /home/kasm-user/Desktop/code.desktop \
