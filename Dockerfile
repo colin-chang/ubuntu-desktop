@@ -35,7 +35,7 @@ RUN apt update && mkdir -p /home/kasm-user/Desktop \
 
 # Visual Studio Code
 && wget https://az764295.vo.msecnd.net/stable/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/code_1.84.2-1699528352_amd64.deb \
-&& dpkg -i code_1.80.2-1690491597_amd64.deb \
+&& dpkg -i code_1.84.2-1699528352_amd64.deb \
 && sed -i 's/Exec=\/usr\/share\/code\/code/Exec=\/usr\/share\/code\/code --no-sandbox/g' /usr/share/applications/code.desktop \
 && sed -i 's/Icon=com.visualstudio.code/Icon=\/usr\/share\/code\/resources\/app\/resources\/linux\/code.png/g' /usr/share/applications/code.desktop \
 && ln -s /usr/share/applications/code.desktop /home/kasm-user/Desktop/code.desktop \
